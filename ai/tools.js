@@ -26,7 +26,7 @@ export const tools = {
         }
     },
     write_file: {
-        meta:{
+        meta: {
             type: 'function',
             name: 'write_file',
             description: 'Create a file or fully overwite it. Missing dirrectories are created automatically.',

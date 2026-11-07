@@ -22,9 +22,8 @@ rl.on('line', async (line) => {
         };
         const res = await agent.run(message);
 
-        process.stdout.write(`${res}\n`); 
-    } catch(error) {
-
+        process.stdout.write(`${res}\n`);
+    } catch (error) {
         process.stdout.write(`(( Error: ${error.message}\n`);
         process.stdout.write(error);
     }

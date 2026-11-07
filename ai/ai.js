@@ -7,8 +7,8 @@ export const ai = {
         const res = await fetch(API_URL, {
             method: 'POST',
             headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${API_KEY}`,
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${API_KEY}`,
             },
             body: JSON.stringify({
                 model: AI_MODEL,
@@ -18,7 +18,7 @@ export const ai = {
         });
 
         const data = await res.json();
-        if(!res.ok) throw new Error(data.error?.message ?? `HTTP ${res.status}`);
+        if (!res.ok) throw new Error(data.error?.message ?? `HTTP ${res.status}`);
 
         return {
             role: 'assistant',
